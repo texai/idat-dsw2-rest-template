@@ -13,7 +13,7 @@ public class Cursoweb2Application {
 
     @Bean
     public RestTemplate restTemplate() {
-	return new RestTemplate();
+	    return new RestTemplate();
     }	
 
 	@RequestMapping("/")

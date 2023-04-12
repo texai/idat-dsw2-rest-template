@@ -1,8 +1,8 @@
 package edu.idat.cursoweb2.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.Collection;
-import org.springframework.http.HttpStatus;
+// import java.util.Collection;
+// import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -67,7 +67,7 @@ public class InstructorRestController {
     {
 		String url = "http://localhost:8090/rest/instructor/buscar/"+id;
 		Instructor instructor = restTemplate.getForObject(url,Instructor.class);
-		return instructor.toString();
+		return instructor.toString() + "<br><br><a href=/web/instructor/>regresar</a>";
     }
 	
 
@@ -78,7 +78,7 @@ public class InstructorRestController {
 		Instructor[] instructores = restTemplate.getForObject(url, Instructor[].class);
 		String res="";
 		for (Instructor instructor : instructores){
-			res += instructor.toString() + "<br />";
+			res += instructor.toString2() + "<br />";
 		}
 		return res;
 	}

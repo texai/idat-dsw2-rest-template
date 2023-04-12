@@ -20,8 +20,12 @@ public class Instructor implements Serializable{
         return this.nombre + " " + this.apellidos + " (" + this.email + ") " ;
     }
 	
+    public String toString2(){
+        return this.nombre + " " + this.apellidos + " (" + this.email + ") " + this.fregistro ;
+    }
+	
     public String toStringWeb(){
-        String opVerLink = "<a href=http://localhost:8091/web/instructor/ver-obj/"+this.instructorId+">[ver]</a>";
+        String opVerLink = "<a href=/web/instructor/ver-obj/"+this.instructorId+">[ver2]</a>";
         return "<li>" + this.nombre + " <b>" + this.apellidos + "</b> (" + this.email + ") "+opVerLink+"</li>" ;
     }
 	
