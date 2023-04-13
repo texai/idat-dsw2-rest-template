@@ -1,0 +1,7 @@
+- Resolver ejercicio: "Mostrar sólo instructores (id>10)".
+- [TAREA] Crear un botón para eliminar todos los datos,
+- [TAREA] Crear un botón para eliminar un Instructor
+- [TAREA] Crear un botón para realizar una edición (no interactiva) en un Instructor
+- [Documento] Temas del Examen Final
+
+- [EXAMEN FINAL]: Cuestionario de 18 preguntas + 2 ejercicios de programación
