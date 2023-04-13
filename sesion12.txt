@@ -2,6 +2,15 @@
 - [TAREA] Crear un botón para eliminar todos los datos,
 - [TAREA] Crear un botón para eliminar un Instructor
 - [TAREA] Crear un botón para realizar una edición (no interactiva) en un Instructor
-- [Documento] Temas del Examen Final
 
-- [EXAMEN FINAL]: Cuestionario de 18 preguntas + 2 ejercicios de programación
+- Sesion 12 
+
+- [EXAMEN FINAL]: Cuestionario de 18 puntos + 2 ejercicios de programación
+- [Documento] Temas del Examen Final:
+    - Cuestionarios de las Guías
+    - Clases relevantes de SpringBoot
+    - Métodos relevantes de SpringBoot
+    - Anotaciones relevantes de SpringBoot
+    - HTTP Codes
+    - HTTP Methods
+    - ...
