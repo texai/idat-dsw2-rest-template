@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
@@ -13,7 +14,10 @@ public class Cursoweb2Application {
 
     @Bean
     public RestTemplate restTemplate() {
-	    return new RestTemplate();
+		BasicAuthenticationInterceptor intercep = new BasicAuthenticationInterceptor("user","123456");
+		RestTemplate restTemplate = new RestTemplate();
+		restTemplate.getInterceptors().add(intercep);
+	    return restTemplate;
     }	
 
 	@RequestMapping("/")
