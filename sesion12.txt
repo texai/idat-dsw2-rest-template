@@ -14,3 +14,9 @@
     - HTTP Codes
     - HTTP Methods
     - ...
+
+
+Participaciones:
+- LN75578039 - Controller vs RestController
+- a18103528@idat.edu.pe - endpoint
+- a18103528@idat.edu.pe - autenticacion vs autorizacion
