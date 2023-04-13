@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import java.util.Arrays;
+import java.util.Date;
+import java.util.Random;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -63,7 +66,7 @@ public class InstructorRestController {
 
 
     @RequestMapping(value = "/ver-obj/{id}", method = RequestMethod.GET)
-    public String getEmployee2(@PathVariable("id") int id)
+    public String getEmployee2(@PathVariable("id") String id)
     {
 		String url = "http://localhost:8090/rest/instructor/buscar/"+id;
 		Instructor instructor = restTemplate.getForObject(url,Instructor.class);
@@ -99,18 +102,38 @@ public class InstructorRestController {
 		return res;
     }
 
+	// [DEMO EN CLASE]
 	@RequestMapping(value = "/generar", method = RequestMethod.POST)
 	public ModelAndView generar()
     {
-		MultiValueMap<String,Object> values=new LinkedMultiValueMap<String,Object>();
-		values.add("instructorId","1000");
-		values.add("nombre","Instructor");
-		values.add("apellidos","Ape Llidos");
-		values.add("password","pwd");
-		values.add("email","correo@example.com");
-		values.add("fregistro","2023-02-02T02:02:02.000");
-		restTemplate.postForObject("http://localhost:8090/rest/instructor/agregar",values,Instructor.class);
+		Random rand = new Random();
+		int id = rand.nextInt(1000)+1000;
+
+		Instructor instructor = new Instructor();
+		instructor.setInstructorId(0);
+		instructor.setNombre("Instructor "+id);
+		instructor.setApellidos("Ape Llidos");
+		instructor.setPassword("pwd");
+		instructor.setEmail("correo@example.com");
+		instructor.setFregistro(new Date());
+
+		restTemplate.postForObject("http://localhost:8090/rest/instructor/agregar",instructor,Instructor.class);
 		return new ModelAndView("redirect:/instructor/");
     }
+
+	// [TAREA] Crear un botón para eliminar todos los datos,
+	// realizar los cambios respectivos también en el servidor REST
+	@RequestMapping(value = "/reset", method = RequestMethod.POST)
+	public ModelAndView reset()
+    {
+		return new ModelAndView("redirect:/instructor/");
+	}
+
+
+	// [TAREA] Crear un botón para eliminar un Instructor
+
+
+
+
 
 }
