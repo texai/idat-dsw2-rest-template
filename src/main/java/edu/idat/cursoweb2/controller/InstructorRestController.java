@@ -1,11 +1,7 @@
 package edu.idat.cursoweb2.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-// import java.util.Collection;
-// import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -129,8 +125,9 @@ public class InstructorRestController {
 		return new ModelAndView("redirect:/instructor/");
 	}
 
-
 	// [TAREA] Crear un botón para eliminar un Instructor
+
+	// [TAREA] Crear un botón para realizar una edición en un Instructor
 
 
 
